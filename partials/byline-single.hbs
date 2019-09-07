@@ -10,7 +10,16 @@
     <section class="author-card-content">
         <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
         {{#if bio}}
-            <p>{{{bio}}}</p>
+            {{!-- Ghost limits the size of the bio to 200 chars --}}
+            {{!-- Ghost won't allow links in the bio --}}
+            {{!-- I've tried to override the links, but the 200 chars fucks it up :( --}}
+            {{!-- <p>{{bio}}</p> --}}
+            {{!-- HARDCODING HERE AND IT SUCKS --}}
+            <p>
+            Jason Straughan is the CEO of <a href="https://codeup.com">Codeup</a>, a career accelerator based in 
+            San Antonio, TX that focuses on Software Development and Data Science. Keep up with his adventures by following 
+            <a href="https://twitter.com/jdstraughan">@jdstraughan</a> on Twitter.
+            </p>
         {{else}}
             <p>Read <a href="{{url}}">more posts</a> by this author.</p>
         {{/if}}
